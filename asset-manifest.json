@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.484d2a72.css",
+    "main.js": "/static/js/main.58f2816d.js",
+    "static/js/787.f57f2c7e.chunk.js": "/static/js/787.f57f2c7e.chunk.js",
+    "static/media/LG_Monitor_90s_iseonyoon.png": "/static/media/LG_Monitor_90s_iseonyoon.5e3b3cc3f62c90676274.png",
+    "index.html": "/index.html",
+    "main.484d2a72.css.map": "/static/css/main.484d2a72.css.map",
+    "main.58f2816d.js.map": "/static/js/main.58f2816d.js.map",
+    "787.f57f2c7e.chunk.js.map": "/static/js/787.f57f2c7e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.484d2a72.css",
+    "static/js/main.58f2816d.js"
+  ]
+}
