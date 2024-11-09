@@ -9,7 +9,7 @@
 
 /* canvas 스타일 */
 
-#myCanvas {
+#Canvas {
     width: 100%;
     max-width: 600px;
     /* 최대 너비 설정 */
