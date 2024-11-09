@@ -1,26 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!DOCTYPE HTML>
+<html lang="ko">
+<header>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rive Hello World</title>
-  </head>
-  <body>
-    <canvas id="canvas" width="300" height="300"></canvas>
+    <title>신비한 포춘쿠키샵</title>
+</header>
 
+<body>
+    <canvas id="canvas" width="500" height="500" margin="1000"></canvas>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
-      const r = new rive.Rive({
-        src: "src/riv/mcsplash.riv",
-        canvas: document.getElementById("canvas"),
-        autoplay: true,
-        // artboard: "Arboard", // Optional. If not supplied the default is selected
-        stateMachines: "bumpy",
-        onLoad: () => {
-          // Ensure the drawing surface matches the canvas size and device pixel ratio
-          r.resizeDrawingSurfaceToCanvas();
-        },
-      });
+        const r = new rive.Rive({
+            src: "./riv/mcsplash2.riv",
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            // artboard: "Arboard", // Optional. If not supplied the default is selected
+            stateMachines: "State Machine 1",
+            onLoad: () => {
+                // Ensure the drawing surface matches the canvas size and device pixel ratio
+                r.resizeDrawingSurfaceToCanvas();
+            },
+        });
     </script>
-  </body>
+</body>
+
 </html>
