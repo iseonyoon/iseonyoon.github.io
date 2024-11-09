@@ -9,16 +9,16 @@
 
 <body>
     <div class="canvas-container">
-        <canvas id="canvas" width="500" height="500" margin="1000"></canvas>
+        <canvas id="canvas" width="500" height="500"></canvas>
     </div>
-    <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
+    <script src="https://unpkg.com/@rive-app/canvas@2.20.0 "></script>
     <script>
         const r = new rive.Rive({
-            src: "./riv/mcsplash2.riv",
-            canvas: document.getElementById("canvas"),
+            src: "./riv/mcsplash2.riv ",
+            canvas: document.getElementById("canvas "),
             autoplay: true,
-            // artboard: "Arboard", // Optional. If not supplied the default is selected
-            stateMachines: "State Machine 1",
+            // artboard: "Arboard ", // Optional. If not supplied the default is selected
+            stateMachines: "State Machine 1 ",
             onLoad: () => {
                 // Ensure the drawing surface matches the canvas size and device pixel ratio
                 r.resizeDrawingSurfaceToCanvas();
