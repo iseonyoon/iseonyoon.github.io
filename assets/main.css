@@ -17,16 +17,16 @@
     font-style: normal;
 }
 
+.body {
+    font-family: "Orbit", sans-serif;
+}
+
 .canvas-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     /* 뷰포트 높이에 맞게 중앙 정렬 */
-}
-
-.body {
-    font-family: "Orbit", sans-serif;
 }
 
 
