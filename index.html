@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
-    <script type="text/javascript" src="./src/script.js" />
-    <link href="./src/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rive Hello World</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
 
-
-</head>
-<Body>
-
-  <div>ㅗ따어ㅗㄹ너로미어</div>
-<canvas id="canvas" width="500" height="500"></canvas>
-
-<script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
-<script>
-  const r = new rive.Rive({
-    src: "./iseonyoon.github.io/src/riv/mcsplash.riv",
-    canvas: document.getElementById("canvas"),
-    autoplay: true,
-    // artboard: "Arboard", // Optional. If not supplied the default is selected
-    stateMachines: "bumpy",
-    onLoad: () => {
-      // Ensure the drawing surface matches the canvas size and device pixel ratio
-      r.resizeDrawingSurfaceToCanvas();
-    },
-  });
-</script>
- 
-</Body>
-
+    <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
+    <script>
+      const r = new rive.Rive({
+        src: "/src/riv/mcsplash.riv",
+        canvas: document.getElementById("canvas"),
+        autoplay: true,
+        // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "bumpy",
+        onLoad: () => {
+          // Ensure the drawing surface matches the canvas size and device pixel ratio
+          r.resizeDrawingSurfaceToCanvas();
+        },
+      });
+    </script>
+  </body>
 </html>
