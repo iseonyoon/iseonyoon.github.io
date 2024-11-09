@@ -1,0 +1,11 @@
+.c1 {
+    width: 890px;
+    height: 550px;
+    filter: brightness(80%);
+    background: url(../ghostRain/img/background.PNG) no-repeat center;
+    background-size: contain;
+    display: block;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
