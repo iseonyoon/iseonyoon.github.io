@@ -2,12 +2,15 @@
 <html lang="ko">
 <header>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" / <link rel="stylesheet" type="text/css" href="assets/main.css">
+
     <title>신비한 포춘쿠키샵</title>
 </header>
 
 <body>
-    <canvas id="canvas" width="500" height="500" margin="1000"></canvas>
+    <div class="canvas-container">
+        <canvas id="canvas" width="500" height="500" margin="1000"></canvas>
+    </div>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
         const r = new rive.Rive({
