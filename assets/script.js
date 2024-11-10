@@ -15,7 +15,7 @@ async function getFortune() {
 
     fortunesAvailable--;
     if (fortunesAvailable === 0) {
-      document.getElementById("fortune-button").style.display = "none";
+      document.getElementById("fortune-button").disabled = true;
     }
     document.getElementById("share-button").style.display = "block";
   } else {
@@ -25,9 +25,8 @@ async function getFortune() {
 }
 
 function shareFortune() {
-  // 여기에 공유 기능을 구현하세요.
   fortunesAvailable++;
-  document.getElementById("fortune-button").style.display = "block";
+  document.getElementById("fortune-button").disabled = false;
   document.getElementById("share-button").style.display = "none";
 }
 
