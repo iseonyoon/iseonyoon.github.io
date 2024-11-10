@@ -36,14 +36,16 @@ html, body {
   }
 
   #header{
+    font-family: "Orbit", serif;
     text-align: center;
     font-size: 1rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.308);
+    padding: 1rem;
   }
 
   h1{
-    font-family: "Orbit", serif;
+  
     font-size: 2.4rem;
 
   }
