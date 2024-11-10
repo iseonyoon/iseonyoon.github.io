@@ -17,15 +17,18 @@
     font-style: normal;
 }
 
-.body {
-    font-family: "Orbit", sans-serif;
-    background: #f0f0f0;
+html,
+body {
     margin: 0;
+    padding: 0;
     overflow: hidden;
+    height: 100%;
 }
 
-.canvas1 {
-    background-color: red;
+
+/* Rive 캔버스를 전체 화면으로 설정 */
+
+canvas {
     display: block;
     width: 100vw;
     height: 100vh;
