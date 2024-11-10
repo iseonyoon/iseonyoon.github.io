@@ -3,10 +3,7 @@ html, body {
     padding: 0;
     overflow: hidden;
     height: 100%;
-    background-image: url('img/face.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+
   }
   body {
     background-image: url('img/face.png');
@@ -18,6 +15,6 @@ html, body {
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
     display: block;
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 50vh;
   }
