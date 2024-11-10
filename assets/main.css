@@ -59,7 +59,8 @@ html, body {
     position: center;
     font-size: 1.4rem;
     width: 60%;
-    background-color: rgba(0, 0, 0, 0.308);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.452);
 
 
   /* Rive 캔버스를 전체 화면으로 설정 */
