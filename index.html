@@ -1,0 +1,39 @@
+<!doctype html>
+<html ㅣlang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>신비한 포춘쿠키샵</title>
+    <style type="text/css">
+        @import url("assets/main.css");
+    </style>
+    <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+</head>
+
+<body>
+    <canvas id="riveCanvas"></canvas>
+
+    <script>
+      // Rive 애니메이션 로드 및 전체 화면으로 설정
+      const riveCanvas = document.getElementById('riveCanvas');
+  
+      // 캔버스 크기 조정 함수
+      function resizeCanvas() {
+        riveCanvas.width = window.innerWidth;
+        riveCanvas.height = window.innerHeight;
+      }
+  
+      // 초기 캔버스 크기 설정 및 창 크기 변경에 따라 재조정
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+  
+      // Rive 애니메이션 로드
+      new rive.Rive({
+        src: 'path/to/your_animation.riv',  // Rive 파일 경로
+        canvas: riveCanvas,
+        autoplay: true,                      // 자동 재생 설정
+        stateMachines: ['State Machine 1'],  // 사용할 상태 머신 이름 (필요한 경우)
+      });
+    </script>
+</body>
+</html>
