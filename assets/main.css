@@ -41,6 +41,7 @@ html, body {
 
   h1{
     font-size: 3rem;
+    position: center;
   }
 
   /* Rive 캔버스를 전체 화면으로 설정 */
@@ -48,6 +49,5 @@ html, body {
     display: block;
     width: 100vw;
     height: 100vh;
-    position: center;
   }
   
