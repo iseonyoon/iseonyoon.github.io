@@ -34,7 +34,7 @@ html, body {
     background-position: center top;
   }
 
-  #header{
+  .header{
     font-size: 2rem;
     color: aliceblue;
   }
