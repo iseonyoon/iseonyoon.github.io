@@ -25,6 +25,7 @@ html, body {
 
   }
   body {
+    font-family: "Diphylleia", serif;
     background-image: url('img/f.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
