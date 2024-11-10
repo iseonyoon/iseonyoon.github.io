@@ -1,0 +1,63 @@
+.orbit-regular {
+  font-family: "Orbit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gloock-regular {
+  font-family: "Gloock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.diphylleia-regular {
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: black;
+
+  }
+  body {
+    text-align: center;
+    font-family: "Diphylleia", serif;
+    
+    background-image: url('img/f1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  #header{
+   
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.308);
+    padding: 1rem;
+  }
+
+  h1{
+    font-family: "Diphylleia", serif;
+    font-size: 2.4rem;
+
+  }
+
+  #fresault{
+    text-align: center;
+    font-size: 1.8rem;  }
+
+  /* Rive 캔버스를 전체 화면으로 설정 */
+  canvas {
+    display: block;
+    width: 80vw;
+    height: 80vh;
+  }
+  
