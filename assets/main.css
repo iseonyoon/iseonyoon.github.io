@@ -36,6 +36,6 @@ html, body {
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
     display: block;
-    width: 70vw;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
   }
