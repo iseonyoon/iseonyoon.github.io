@@ -57,6 +57,7 @@ html, body {
     padding: 2rem;
     font-size: 0.8rem;
     color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.308);
     margin:auto;
   }
 
