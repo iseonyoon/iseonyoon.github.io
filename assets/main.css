@@ -3,13 +3,13 @@ html, body {
     padding: 0;
     overflow: hidden;
     height: 100%;
-    background-image: url('./img/face.png');
+    background-image: url('img/face.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
   body {
-    background-image: url('./img/face.png');
+    background-image: url('img/face.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
