@@ -29,7 +29,7 @@ html, body {
     text-align: center;
     font-family: "Diphylleia", serif;
     
-    background-image: url('bf.jpg');
+    background-image: url('ff.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -55,7 +55,7 @@ html, body {
     text-align: center;
     font-size: 1.8rem;
     height: 80%;
-    background-image: url('img/mouth.png');
+
     background-repeat: no-repeat; 
     background-position: center top; }
 
