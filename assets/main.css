@@ -54,7 +54,8 @@ html, body {
     font-family: "Orbit", serif;
     font-weight: 400;
     margin:auto;
-    padding: 3rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     position: center;
     font-size: 1rem;
