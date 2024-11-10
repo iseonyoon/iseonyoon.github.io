@@ -34,6 +34,11 @@ html, body {
     background-position: center top;
   }
 
+  #header{
+    font-size: 2rem;
+    color: aliceblue;
+  }
+
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
     display: block;
