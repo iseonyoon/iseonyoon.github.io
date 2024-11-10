@@ -51,10 +51,13 @@ html, body {
   }
 
   #fresault{
+    font-family: "Orbit", serif;
+    font-weight: 400;
     padding: 1.8rem;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     width: 60%;
+    background-color: rgba(0, 0, 0, 0.308);
 
 
   /* Rive 캔버스를 전체 화면으로 설정 */
