@@ -1,5 +1,14 @@
 let fortunesAvailable = 3;
 
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("fortune-button")
+    .addEventListener("click", getFortune);
+  document
+    .getElementById("share-fortune-button")
+    .addEventListener("click", shareFortune);
+});
+
 async function getFortune() {
   if (fortunesAvailable > 0) {
     const response = await fetch("fortunes.json");
@@ -29,5 +38,3 @@ function shareFortune() {
   document.getElementById("fortune-button").disabled = false;
   document.getElementById("share-button").style.display = "none";
 }
-
-document.getElementById("fortune-button").onclick = getFortune;
