@@ -24,3 +24,15 @@
 .canvas-container {
     /* 뷰포트 높이에 맞게 중앙 정렬 */
 }
+
+.background {
+    width: 890px;
+    height: 550px;
+    filter: brightness(80%);
+    background: url(../ghostRain/img/background.PNG) no-repeat center;
+    background-size: contain;
+    display: block;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
