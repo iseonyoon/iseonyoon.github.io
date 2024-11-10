@@ -35,8 +35,9 @@ html, body {
   }
 
   #header{
+    text-align: center;
     font-size: 2rem;
-    color: aliceblue;
+    color: white;
   }
 
   h1{
