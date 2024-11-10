@@ -50,6 +50,14 @@ html, body {
 
   }
 
+  #pt{
+    text-align: center;
+    position: center;
+    font-size: 1rem;
+    color: white;
+    margin:auto;
+  }
+
   #fresault{
     font-family: "Orbit", serif;
     font-weight: 400;
