@@ -54,12 +54,14 @@ html, body {
     text-align: center;
     font-size: 1.8rem;
     height: 100%;
-    background-image: url('img/mouth.png');  }
+    background-image: url('img/mouth.png');
+    background-repeat: no-repeat; 
+    background-position: center top; }
 
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
-    position: center top;
-    display: block;
+    background-position: center top;
+
 
   }
   
