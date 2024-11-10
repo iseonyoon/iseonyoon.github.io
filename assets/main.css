@@ -1,3 +1,22 @@
+.orbit-regular {
+  font-family: "Orbit", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.gloock-regular {
+  font-family: "Gloock", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.diphylleia-regular {
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
 html, body {
     margin: 0;
     padding: 0;
