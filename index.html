@@ -9,15 +9,20 @@
 
 <body>
     <div id="canvas-container">
-        d
+        d212
         <canvas id="canvas" width="300" height="300"></canvas>
     </div>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
+        layout = new rive.Layout({
+            fit: rive.Fit.FitWidth,
+            alignment: rive.Alignment.TopCenter,
+        });
         const r = new rive.Rive({
             src: "./riv/mcsplash2.riv",
             canvas: document.getElementById("canvas"),
             autoplay: true,
+            layout: layout,
             // artboard: "Arboard ", // Optional. If not supplied the default is selected
             stateMachines: "State Machine 1",
             onLoad: () => {
