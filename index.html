@@ -9,25 +9,23 @@
 
 <body>
     <div id="canvas-container">
-        11111svvv
+        11111svvvsvvsvs
         <canvas id="canvas1"></canvas>
     </div>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
-        const r = new rive.Rive({
-            src: "./riv/mcsplash2.riv",
-            canvas: canvas1,
+        const rive = new Rive({
+            src: "riv/mcsplash2.riv",
             autoplay: true,
+            canvas: canvas1,
             layout: new Layout({
 
                 fit: Fit.Layout,
                 // layoutScaleFactor: 2, // 2x scale of the layout, when using `Fit.Layout`. This allows you to resize the layout as needed.
             }),
-            // artboard: "Arboard ", // Optional. If not supplied the default is selected
-            stateMachines: "State Machine 1",
+            stateMachines: ["State Machine 1"],
             onLoad: () => {
-                // Ensure the drawing surface matches the canvas size and device pixel ratio
-                r.resizeDrawingSurfaceToCanvas();
+                computeSize();
             },
         });
 
