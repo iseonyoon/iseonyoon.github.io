@@ -19,9 +19,22 @@
     <!--<canvas id="riveCanvas"></canvas>-->
       <div id="fresault">
         여기에 당신의 운세가 보일 거예요.
-        <div class="container"> <h1>포춘쿠키 운세</h1> <div id="fortune-cookie"> <button id="fortune-button">포춘쿠키 열기</button> <div id="fortune-message"></div> <div id="share-button" style="display: none;"> <button id="share-fortune-button">운세 공유하기</button> </div> </div>
+        <div class="fortune-container">
+          <h1>오늘의 포춘쿠키 🍪</h1>
+          <button id="getFortuneBtn">포춘쿠키 열기</button>
+          <div id="fortuneResult" class="hidden">
+              <p id="fortuneMessage"></p>
+              <p><strong>오늘의 이모티콘:</strong> <span id="fortuneEmoji"></span></p>
+              <p><strong>주문:</strong> <span id="fortuneCharm"></span></p>
+              <p><strong>비운의 아이템:</strong> <span id="fortuneMisfortune"></span></p>
+              <button id="shareBtn">공유하기</button>
+              <button id="closeBtn">닫기</button>
+          </div>
       </div>
 
+
+
+    </div>
    <!-- <script>
       // Rive 애니메이션 로드 및 전체 화면으로 설정
       const riveCanvas = document.getElementById('riveCanvas');

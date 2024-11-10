@@ -1,51 +1,43 @@
-let fortunesAvailable = 3;
-
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM content loaded");
-  document
-    .getElementById("fortune-button")
-    .addEventListener("click", getFortune);
-  document
-    .getElementById("share-fortune-button")
-    .addEventListener("click", shareFortune);
-});
+  let fortuneCount = 0;
+  const maxFortunesPerDay = 3;
 
-async function getFortune() {
-  console.log("getFortune function called");
-  if (fortunesAvailable > 0) {
-    try {
-      const response = await fetch("fortunes.json");
-      if (response.ok) {
-        const fortunes = await response.json();
-        const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+  const fortuneBtn = document.getElementById("getFortuneBtn");
+  const fortuneResult = document.getElementById("fortuneResult");
+  const fortuneMessage = document.getElementById("fortuneMessage");
+  const fortuneEmoji = document.getElementById("fortuneEmoji");
+  const fortuneCharm = document.getElementById("fortuneCharm");
+  const fortuneMisfortune = document.getElementById("fortuneMisfortune");
+  const shareBtn = document.getElementById("shareBtn");
+  const closeBtn = document.getElementById("closeBtn");
 
-        document.getElementById("fortune-message").innerHTML = `
-                    <p>${fortune.message}</p>
-                    <p>이모티콘: ${fortune.emoji}</p>
-                    <p>주문: ${fortune.charm}</p>
-                    <p>비운의 아이템: ${fortune.unluckyItem}</p>
-                `;
-
-        fortunesAvailable--;
-        if (fortunesAvailable === 0) {
-          document.getElementById("fortune-button").disabled = true;
-        }
-        document.getElementById("share-button").style.display = "block";
-      } else {
-        console.error("포춘 데이터를 불러오는 데 실패했습니다.");
-      }
-    } catch (error) {
-      console.error("Fetch 요청 중 오류가 발생했습니다:", error);
+  fortuneBtn.addEventListener("click", () => {
+    if (fortuneCount < maxFortunesPerDay) {
+      fetch("fortunes.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const randomFortune = data[Math.floor(Math.random() * data.length)];
+          fortuneMessage.textContent = randomFortune.message;
+          fortuneEmoji.textContent = randomFortune.emoji;
+          fortuneCharm.textContent = randomFortune.charm;
+          fortuneMisfortune.textContent = randomFortune.misfortune;
+          fortuneResult.classList.remove("hidden");
+          fortuneCount++;
+        })
+        .catch((error) => console.error("Failed to load fortunes:", error));
+    } else {
+      alert(
+        "오늘의 포춘쿠키는 더 이상 볼 수 없습니다. 내일 다시 시도해 보세요!"
+      );
     }
-  } else {
-    document.getElementById("fortune-message").innerText =
-      "오늘의 운세를 모두 사용했습니다. 공유 버튼을 눌러 운세를 더 확인해보세요!";
-  }
-}
+  });
 
-function shareFortune() {
-  console.log("shareFortune function called");
-  fortunesAvailable++;
-  document.getElementById("fortune-button").disabled = false;
-  document.getElementById("share-button").style.display = "none";
-}
+  shareBtn.addEventListener("click", () => {
+    alert("운세가 공유되었습니다! 한 번 더 운세를 볼 수 있습니다.");
+    fortuneCount--; // 공유 후 추가 운세 보기 가능
+  });
+
+  closeBtn.addEventListener("click", () => {
+    fortuneResult.classList.add("hidden");
+  });
+});
