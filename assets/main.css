@@ -36,12 +36,12 @@ html, body {
   }
 
   #header{
-    text-align: center;
+    
     font-size: 2rem;
     color: white;
   }
 
-  h1{
+  h1{background-color: rgba(0, 0, 0, 0.308);
     font-size: 3rem;
     position: center;
   }
