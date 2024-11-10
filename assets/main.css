@@ -52,7 +52,9 @@ html, body {
 
   #fresault{
     text-align: center;
-    font-size: 1.8rem;  }
+    font-size: 1.8rem;
+    height: 100%;
+    background-image: url('img/mouth.png');  }
 
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
