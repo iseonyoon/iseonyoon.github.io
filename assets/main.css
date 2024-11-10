@@ -21,11 +21,7 @@
     font-family: "Orbit", sans-serif;
 }
 
-.canvas-container {
-    /* 뷰포트 높이에 맞게 중앙 정렬 */
-}
-
-.background {
+#canvas-container {
     width: 890px;
     height: 550px;
     filter: brightness(80%);
