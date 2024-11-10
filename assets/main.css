@@ -28,11 +28,7 @@ html, body {
   body {
     text-align: center;
     font-family: "Diphylleia", serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    
+
     background-image: url('img/f50.jpg');
     background-repeat: no-repeat;
     background-size: cover;
