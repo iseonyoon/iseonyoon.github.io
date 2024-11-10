@@ -58,8 +58,8 @@ html, body {
 
   /* Rive 캔버스를 전체 화면으로 설정 */
   canvas {
+    position: center top;
     display: block;
-    width: 80vw;
-    height: 80vh;
+
   }
   
