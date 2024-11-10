@@ -1,42 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-  let fortuneCount = 0;
-  const maxFortunesPerDay = 3;
+let fortunesAvailable = 3;
 
-  const fortuneBtn = document.getElementById("getFortuneBtn");
-  const fortuneResult = document.getElementById("fortuneResult");
-  const fortuneMessage = document.getElementById("fortuneMessage");
-  const fortuneEmoji = document.getElementById("fortuneEmoji");
-  const fortuneCharm = document.getElementById("fortuneCharm");
-  const fortuneMisfortune = document.getElementById("fortuneMisfortune");
-  const shareBtn = document.getElementById("shareBtn");
-  const closeBtn = document.getElementById("closeBtn");
+async function getFortune() {
+  if (fortunesAvailable > 0) {
+    const response = await fetch("fortunes.json");
+    const fortunes = await response.json();
+    const fortune = fortunes[Math.floor(Math.random() * fortunes.length)];
 
-  fortuneBtn.addEventListener("click", () => {
-    if (fortuneCount < maxFortunesPerDay) {
-      fetch("fortunes.json")
-        .then((response) => response.json())
-        .then((data) => {
-          const randomFortune = data[Math.floor(Math.random() * data.length)];
-          fortuneMessage.textContent = randomFortune.message;
-          fortuneEmoji.textContent = randomFortune.emoji;
-          fortuneCharm.textContent = randomFortune.charm;
-          fortuneMisfortune.textContent = randomFortune.misfortune;
-          fortuneResult.classList.remove("hidden");
-          fortuneCount++;
-        });
-    } else {
-      alert(
-        "오늘의 포춘쿠키는 더 이상 볼 수 없습니다. 내일 다시 시도해 보세요!"
-      );
+    document.getElementById("fortune-message").innerHTML = `
+            <p>${fortune.message}</p>
+            <p>이모티콘: ${fortune.emoji}</p>
+            <p>주문: ${fortune.charm}</p>
+            <p>비운의 아이템: ${fortune.unluckyItem}</p>
+        `;
+
+    fortunesAvailable--;
+    if (fortunesAvailable === 0) {
+      document.getElementById("fortune-button").style.display = "none";
     }
-  });
+    document.getElementById("share-button").style.display = "block";
+  } else {
+    document.getElementById("fortune-message").innerText =
+      "오늘의 운세를 모두 사용했습니다. 공유 버튼을 눌러 운세를 더 확인해보세요!";
+  }
+}
 
-  shareBtn.addEventListener("click", () => {
-    alert("운세가 공유되었습니다! 한 번 더 운세를 볼 수 있습니다.");
-    fortuneCount--; // 공유 후 추가 운세 보기 가능
-  });
+function shareFortune() {
+  // 여기에 공유 기능을 구현하세요.
+  fortunesAvailable++;
+  document.getElementById("fortune-button").style.display = "block";
+  document.getElementById("share-button").style.display = "none";
+}
 
-  closeBtn.addEventListener("click", () => {
-    fortuneResult.classList.add("hidden");
-  });
-});
+document.getElementById("fortune-button").onclick = getFortune;
