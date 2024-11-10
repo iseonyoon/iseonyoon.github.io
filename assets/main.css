@@ -26,6 +26,7 @@ html, body {
 
   }
   body {
+    text-align: center;
     font-family: "Diphylleia", serif;
     
     background-image: url('img/f1.jpg');
