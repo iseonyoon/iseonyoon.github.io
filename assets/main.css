@@ -21,14 +21,9 @@
     font-family: "Orbit", sans-serif;
 }
 
-#canvas-container {
-    width: 890px;
-    height: 550px;
-    filter: brightness(80%);
-    background: url(../ghostRain/img/background.PNG) no-repeat center;
-    background-size: contain;
+.canvas1 {
+    background-color: red;
     display: block;
-    margin: auto;
-    text-align: center;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }

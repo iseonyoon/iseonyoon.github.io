@@ -9,20 +9,20 @@
 
 <body>
     <div id="canvas-container">
-        dvdvdv d212svvv
-        <canvas id="canvas" width="300" height="300"></canvas>
+        11111
+        <canvas id="canvas1"></canvas>
     </div>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
-        layout = new rive.Layout({
-            fit: rive.Fit.FitWidth,
-            alignment: rive.Alignment.TopCenter,
-        });
         const r = new rive.Rive({
             src: "./riv/mcsplash2.riv",
-            canvas: document.getElementById("canvas"),
+            canvas: document.getElementById("canvas1"),
             autoplay: true,
-            layout ? : layout,
+            layout: new Layout({
+
+                fit: Fit.Layout,
+                // layoutScaleFactor: 2, // 2x scale of the layout, when using `Fit.Layout`. This allows you to resize the layout as needed.
+            }),
             // artboard: "Arboard ", // Optional. If not supplied the default is selected
             stateMachines: "State Machine 1",
             onLoad: () => {
@@ -30,9 +30,18 @@
                 r.resizeDrawingSurfaceToCanvas();
             },
         });
-        r.layout = new rive.Layout({
-            fit: rive.Fit.Fill
-        });
+
+        function computeSize() {
+            rive.resizeDrawingSurfaceToCanvas();
+        }
+
+        // Subscribe to window size changes and update call `resizeDrawingSurfaceToCanvas`
+        window.onresize = computeSize;
+
+        // Subscribe to devicePixelRatio changes and call `resizeDrawingSurfaceToCanvas`
+        window
+            .matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`)
+            .addEventListener("change", computeSize);
     </script>
 </body>
 
