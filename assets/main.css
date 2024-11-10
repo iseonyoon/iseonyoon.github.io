@@ -29,7 +29,7 @@ html, body {
     text-align: center;
     font-family: "Diphylleia", serif;
     
-    background-image: url('img/ff50.jpg');
+    background-image: url('img/f50.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -54,7 +54,7 @@ html, body {
     padding: 1.8rem;
     text-align: center;
     font-size: 1.8rem;
-    height: 80%;
+    width: 60%;
 
 
   /* Rive 캔버스를 전체 화면으로 설정 */
