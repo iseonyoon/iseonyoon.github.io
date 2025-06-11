@@ -27,7 +27,7 @@ html, body {
   }
   body {
     text-align: center;
-    font-family: "Diphylleia", serif;
+    font-family: "Orbit", serif;
     color: #dd5569;
     
     /* background-image: url('img/f50.jpg'); */
@@ -52,7 +52,7 @@ html, body {
   
 
   h1{
-    font-family: "Diphylleia", serif;
+    font-family: "Orbit", serif;
     font-size: 4rem;
     font-weight: 700; 
     color: #fff; 
@@ -62,11 +62,7 @@ html, body {
   }
 
 
-  /* Rive 캔버스를 전체 화면으로 설정 */
-  canvas {
-    background-position: center top;
-  }
-  
+
 
 
   
